@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- ⚠️ Meta Pixel Code यहाँ Paste करो (अपने Pixel ID के साथ) -->
+<!-- End Meta Pixel Code -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>VISHAV BOOK PUBLICATION · Work From Home</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+-webkit-tap-highlight-color:transparent;
+}
+
+html,body{
+width:100%;
+min-height:100vh;
+}
+
+body{
+background:#0f172a;
+color:#fff;
+display:flex;
+justify-content:center;
+align-items:flex-start;
+padding:0;
+}
+
+/* CARD — Full Mobile Width */
+
+.container{
+width:100%;
+max-width:100%;
+padding:30px 20px 30px;
+background:rgba(255,255,255,0.03);
+min-height:100vh;
+text-align:center;
+position:relative;
+overflow:hidden;
+}
+
+/* Background Glow */
+
+.container::before{
+content:'';
+position:absolute;
+top:-100px;
+right:-100px;
+width:300px;
+height:300px;
+background:radial-gradient(circle,rgba(255,215,0,0.08) 0%,transparent 70%);
+border-radius:50%;
+pointer-events:none;
+}
+
+.container::after{
+content:'';
+position:absolute;
+bottom:-100px;
+left:-100px;
+width:300px;
+height:300px;
+background:radial-gradient(circle,rgba(34,197,94,0.08) 0%,transparent 70%);
+border-radius:50%;
+pointer-events:none;
+}
+
+/* LOGO */
+
+.logo{
+display:block;
+margin:0 auto 16px;
+width:100px;
+height:100px;
+border-radius:50%;
+border:3px solid #FFD700;
+object-fit:cover;
+box-shadow:0 0 30px rgba(255,215,0,0.3);
+position:relative;
+z-index:2;
+}
+
+/* TEXT */
+
+h1{
+font-size:20px;
+color:#FFD700;
+margin-bottom:8px;
+letter-spacing:0.5px;
+line-height:1.3;
+font-weight:800;
+position:relative;
+z-index:2;
+}
+
+h2{
+font-size:15px;
+opacity:0.9;
+margin-bottom:12px;
+font-weight:600;
+position:relative;
+z-index:2;
+}
+
+.sub{
+font-size:13px;
+opacity:0.7;
+margin-bottom:22px;
+line-height:1.5;
+position:relative;
+z-index:2;
+}
+
+/* BUTTON */
+
+.btn{
+display:block;
+text-decoration:none;
+background:#22c55e;
+color:#000;
+font-weight:700;
+padding:17px;
+border-radius:12px;
+margin:14px 0;
+transition:0.3s;
+font-size:15px;
+text-align:center;
+position:relative;
+z-index:2;
+box-shadow:0 8px 25px rgba(34,197,94,0.25);
+}
+
+.btn:hover,.btn:active{
+background:#16a34a;
+transform:scale(1.02);
+}
+
+/* TRUST BOX */
+
+.trust{
+background:rgba(0,255,150,0.08);
+padding:12px;
+border-radius:12px;
+font-size:13px;
+margin-bottom:18px;
+border:1px solid rgba(0,255,150,0.2);
+line-height:1.6;
+position:relative;
+z-index:2;
+}
+
+/* SECTION TITLE */
+
+.section-title{
+font-size:11px;
+color:#FFD700;
+font-weight:700;
+letter-spacing:2px;
+text-transform:uppercase;
+margin:24px 0 14px;
+text-align:center;
+opacity:0.9;
+position:relative;
+z-index:2;
+}
+
+/* STATS ROW */
+
+.stats-row{
+display:flex;
+justify-content:space-around;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.06);
+border-radius:14px;
+padding:16px 10px;
+margin-bottom:8px;
+position:relative;
+z-index:2;
+}
+
+.stat-item{
+text-align:center;
+flex:1;
+}
+
+.stat-num{
+font-size:18px;
+font-weight:800;
+color:#FFD700;
+line-height:1;
+margin-bottom:5px;
+}
+
+.stat-lbl{
+font-size:9px;
+color:#94a3b8;
+font-weight:600;
+letter-spacing:0.8px;
+text-transform:uppercase;
+}
+
+/* STEPS */
+
+.step{
+display:flex;
+align-items:center;
+gap:14px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.06);
+border-radius:12px;
+padding:12px 14px;
+margin-bottom:10px;
+text-align:left;
+transition:0.25s;
+position:relative;
+z-index:2;
+}
+
+.step:hover{
+border-color:rgba(34,197,94,0.3);
+background:rgba(34,197,94,0.05);
+}
+
+.step-num{
+width:32px;
+height:32px;
+border-radius:50%;
+background:linear-gradient(135deg,#22c55e,#16a34a);
+color:#000;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:14px;
+font-weight:800;
+flex-shrink:0;
+}
+
+.step-title{
+font-size:13px;
+font-weight:700;
+color:#fff;
+margin-bottom:3px;
+}
+
+.step-desc{
+font-size:11px;
+color:#94a3b8;
+font-weight:400;
+line-height:1.4;
+}
+
+/* FAQ */
+
+.faq-item{
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.06);
+border-radius:12px;
+padding:12px 16px;
+margin-bottom:8px;
+text-align:left;
+position:relative;
+z-index:2;
+}
+
+.faq-q{
+font-size:12.5px;
+font-weight:700;
+color:#fff;
+margin-bottom:5px;
+}
+
+.faq-a{
+font-size:11.5px;
+color:#94a3b8;
+line-height:1.5;
+font-weight:400;
+}
+
+/* LIST */
+
+.points{
+list-style:none;
+font-size:14px;
+text-align:left;
+margin:16px 0;
+padding:0;
+position:relative;
+z-index:2;
+}
+
+.points li{
+margin:10px 0;
+line-height:1.5;
+}
+
+.points li strong{
+color:#FFD700;
+font-weight:700;
+}
+
+/* URGENCY */
+
+.timer{
+margin-top:20px;
+font-size:13px;
+color:#facc15;
+font-weight:600;
+position:relative;
+z-index:2;
+}
+
+/* SOCIAL PROOF */
+
+.proof{
+margin-top:14px;
+font-size:13px;
+opacity:0.75;
+position:relative;
+z-index:2;
+}
+
+/* FOOTER BRAND */
+
+.footer{
+margin-top:24px;
+padding-top:20px;
+border-top:1px solid rgba(255,255,255,0.06);
+font-size:12px;
+opacity:0.6;
+position:relative;
+z-index:2;
+}
+
+.footer a{
+color:#38bdf8;
+text-decoration:none;
+font-weight:600;
+}
+
+.footer a:hover{
+text-decoration:underline;
+}
+
+/* RISK */
+
+.risk{
+margin-top:14px;
+font-size:11px;
+opacity:0.5;
+line-height:1.5;
+position:relative;
+z-index:2;
+}
+
+/* Safe Area for iPhone */
+
+@supports(padding:max(0px)){
+.container{
+padding-left:max(20px,env(safe-area-inset-left));
+padding-right:max(20px,env(safe-area-inset-right));
+padding-bottom:max(30px,env(safe-area-inset-bottom));
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<img src="https://i.ibb.co/8LG1PNvR/m-Pz-Op-Hhh3i-XKq-Pki-V4-ee604q-Ck-Dc-TWD2-P-Tj7-UEhnm-SWJ-9zs-Ge-Q-c1-GMWJJ0u-HEV-p-Af-Ofbng-ANSq-IJp1.jpg" class="logo" alt="VISHAV BOOK PUBLICATION">
+
+<h1>VISHAV BOOK PUBLICATION</h1>
+<h2>✍️ HANDWRITING WORK FROM HOME</h2>
+
+<p class="sub">
+Simple Writing Work · Daily Payout · No Investment Required
+</p>
+
+<!-- TOP BUTTON -->
+<a href="https://t.me/+VdqHBQnwCNYyMzZl" class="btn">
+🚀 Join Free Telegram Channel
+</a>
+
+<div class="trust">
+✔ 4.9★ Rated Community <br>
+✔ Verified Publisher Since 2020
+</div>
+
+<!-- STATS -->
+<div class="stats-row">
+<div class="stat-item">
+<div class="stat-num">8K+</div>
+<div class="stat-lbl">Writers</div>
+</div>
+<div class="stat-item">
+<div class="stat-num">50+</div>
+<div class="stat-lbl">Daily Jobs</div>
+</div>
+<div class="stat-item">
+<div class="stat-num">0₹</div>
+<div class="stat-lbl">Joining Fee</div>
+</div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="section-title">How It Works</div>
+
+<div class="step">
+<span class="step-num">1</span>
+<div>
+<div class="step-title">Free Telegram Joining</div>
+<div class="step-desc">Click the button, join instantly — no form, no fee</div>
+</div>
+</div>
+
+<div class="step">
+<span class="step-num">2</span>
+<div>
+<div class="step-title">Choose Your Assignment</div>
+<div class="step-desc">Multiple handwriting projects posted daily</div>
+</div>
+</div>
+
+<div class="step">
+<span class="step-num">3</span>
+<div>
+<div class="step-title">Complete &amp; Submit Work</div>
+<div class="step-desc">Write as instructed, upload photo of your work</div>
+</div>
+</div>
+
+<div class="step">
+<span class="step-num">4</span>
+<div>
+<div class="step-title">Receive Your Payment</div>
+<div class="step-desc">Weekly payout via bank / UPI directly</div>
+</div>
+</div>
+
+<!-- FEATURES -->
+<div class="section-title">What You Get</div>
+
+<ul class="points">
+<li>✔ <strong>Multiple Project Types</strong> — Copying, Writing, Notes</li>
+<li>✔ <strong>Weekly Payout</strong> — Direct Bank / UPI Transfer</li>
+<li>✔ <strong>No Experience Needed</strong> — Training Guidance Provided</li>
+<li>✔ <strong>Work Anytime</strong> — Morning / Evening / Night</li>
+<li>✔ <strong>Simple Requirements</strong> — Pen, Paper &amp; Mobile Camera</li>
+<li>✔ <strong>Real-time Support</strong> — Help in Telegram Group</li>
+</ul>
+
+<!-- BOTTOM BUTTON -->
+<a href="https://t.me/+VdqHBQnwCNYyMzZl" class="btn">
+🚀 Join Free Telegram Channel
+</a>
+
+<!-- FAQ -->
+<div class="section-title">Common Questions</div>
+
+<div class="faq-item">
+<div class="faq-q">How much can I write per day?</div>
+<div class="faq-a">You can write as much as you want — no fixed limit. More work = more earning.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">When will I get paid?</div>
+<div class="faq-a">Payments are processed on a weekly basis after work verification.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Is my handwriting good enough?</div>
+<div class="faq-a">If it's readable, it's acceptable. No calligraphy skills needed.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">How do I submit work?</div>
+<div class="faq-a">Simply click a photo of your handwritten pages and send via Telegram.</div>
+</div>
+
+<div class="timer">
+⏳ Limited Slots Available This Week
+</div>
+
+<div class="proof">
+📚 8,000+ Writers Already Joined
+</div>
+
+<p class="risk">
+⚠ Work from home opportunity — no investment required. Results depend on your effort.
+</p>
+
+<!-- CLEAN FOOTER -->
+<div class="footer">
+Powered by 
+<a href="https://t.me/+CKzXLc93ze44MTdl" target="_blank">
+@amitgrowthagency
+</a>
+</div>
+
+</div>
+
+</body>
+</html>
